@@ -53,6 +53,17 @@ int main() {
             is_in = 0;
             appear_2 = 1;
         }
+
+        for(int i = 0; i < count; i++){
+            for(int j = i + 1; j < count; j++){
+                int c = intersection[i];
+
+                if(intersection[i] > intersection[j]){
+                    intersection[i] = intersection[j];
+                    intersection[j] = c;
+                }
+            }
+        }
     }
     //----------------------------------------------------------------//
     for(i = 0; i < count; i++) {
